@@ -4,12 +4,13 @@ require './helper'
 
 
 class Game 
-  attr_accessor :player1, :player2, :current_player
+  attr_accessor :player1, :player2, :current_player, :non_current_player
 
   def initialize
     @player1 = Player.new("Player 1")
     @player2 = Player.new("Player 2")
     @current_player = rand(1..2).to_i
+    # @non_current_player = @current_player == 1 ? 2 : 1
   end
 
   def start 
