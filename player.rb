@@ -9,6 +9,6 @@ class Player
   end
 
   # def remain_blood
-
+  
 
 end
