@@ -1,0 +1,27 @@
+class Main stage to contain all the methods
+
+
+class player 1, 2
+   initialize: name, blood = 3, current_player
+
+   ##state 
+   blood 
+   current_player: true/false
+
+   ##behavior
+   method: remain_blood
+      if input = expect_answer: remain_blood - 0 && puts "Nice job, you are correct!"
+      else remain_blood - 1 && puts "Serious? No!" 
+   check if it is the player's turn: 
+      if !current_player -> switch to another player
+
+blood 1, 2 ---> when score = 0, result came out!
+
+
+
+
+class Question two random numbers( 1 ~ 20 ) plus together
+  question print : prints, 
+  user fill in: gets.chomp
+
+  rand(1..20)
