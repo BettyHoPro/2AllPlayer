@@ -10,11 +10,13 @@ class Player
 
 
   def remain_blood(correct)
+    # puts self.name
     if !correct
       @blood -= 1
     end
-  end
 
+ 
+  end
 end
 
 # puts remian_blood(false)

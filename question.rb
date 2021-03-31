@@ -15,6 +15,10 @@ class Question
   end
   
   def answer_correct?(answer, player)
+    def get_non_player(player)
+      player.name == "Player 1" ? "Player 2" : "Player 1"
+    end
+
     if answer == @expect_answer
       @result = true
       puts "YES! You are correct." 
@@ -23,8 +27,15 @@ class Question
       @result = false
       puts "Seriously ? No!"
       player.remain_blood(@result)
+      if player.blood == 0
+        puts "#{get_non_player(player)} wins the game with a score of #{}/3"
+        puts ""
+        puts "----- GAME OVER -----"
+        puts ""
+        puts "Good bye!"
+        exit
+      end
+
     end
   end
-
-  
 end
