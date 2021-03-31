@@ -14,7 +14,7 @@ class Game
 
   def start 
     puts "Game on! Wish you luck"
-    check_current_player?(@current_player, @player1, @player2)
+    check_current_player?(@current_player, @player1, @player2,  @non_current_player)
   end
 
 end 
