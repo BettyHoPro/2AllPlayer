@@ -10,12 +10,11 @@ class Game
     @player1 = Player.new("Player 1")
     @player2 = Player.new("Player 2")
     @current_player = rand(1..2).to_i
-    # @non_current_player = @current_player == 1 ? 2 : 1
   end
 
   def start 
     puts "Game on! Wish you luck"
-    check_current_player?(@current_player)
+    check_current_player?(@current_player, @player1, @player2)
   end
 
 end 

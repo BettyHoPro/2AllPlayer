@@ -14,29 +14,17 @@ class Question
     "What does #{@number1} plus #{self.number2} equal, expect:#{@expect_answer}  ?"
   end
   
-  def answer_correct?(answer)
+  def answer_correct?(answer, player)
     if answer == @expect_answer
       @result = true
-      # @current_player.count_lives( win = true )
-      "YES! You are correct."
-      # self.player.count_lives( win = true )
+      puts "YES! You are correct." 
+      player.remain_blood(@result)
     else 
       @result = false
-      "Seriously ? No!"
-      # self.player.count_lives( win = false )
+      puts "Seriously ? No!"
+      player.remain_blood(@result)
     end
   end
 
-  # def result?(result)
-  #   if result 
-  #     "testing : correct result"
-  #     # @current_player.blood - 0
-  #     # "#{@current_player.blood}"
-  #   else 
-  #     "testing : false result"
-  #     # @current_player.blood - 1
-  #     # "#{@current_player.blood}"
-  #   end
-  # end
   
 end
